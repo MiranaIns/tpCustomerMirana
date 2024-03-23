@@ -22,6 +22,7 @@ import java.math.BigDecimal;
 import java.util.Collection;
 
 /**
+ * Classe Discount.
  *
  * @author MIRANA
  */

@@ -21,6 +21,7 @@ import java.io.Serializable;
 import java.util.Collection;
 
 /**
+ * Classe MicroMarket.
  *
  * @author MIRANA
  */
