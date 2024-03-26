@@ -10,6 +10,9 @@ import jakarta.inject.Named;
 import jakarta.faces.view.ViewScoped;
 import java.io.Serializable;
 import jakarta.inject.Inject;
+import java.util.List;
+import mg.itu.mirana.tpcustomer.entitity.Discount;
+import mg.itu.mirana.tpcustomer.service.DiscountManager;
 
 /**
  * Backing bean pour la page customerDetails.xhtml.
@@ -25,6 +28,9 @@ public class CustomerDetailsBean implements Serializable {
 
     @Inject
     private CustomerManager customerManager;
+    
+    @Inject
+    private DiscountManager discountManager;
 
     public int getIdCustomer() {
         return idCustomer;
@@ -37,7 +43,8 @@ public class CustomerDetailsBean implements Serializable {
     /**
      * Retourne les détails du client courant (contenu dans l'attribut customer
      * de cette classe).
-     * @return 
+     *
+     * @return
      */
     public Customer getCustomer() {
         return customer;
@@ -59,5 +66,13 @@ public class CustomerDetailsBean implements Serializable {
 
     public void loadCustomer() {
         this.customer = customerManager.findById(idCustomer);
+    }
+
+    /**
+     * Retourne la liste de tous les Discount.
+     * @return 
+     */
+    public List<Discount> getDiscounts() {
+        return discountManager.getAllDiscounts();
     }
 }
