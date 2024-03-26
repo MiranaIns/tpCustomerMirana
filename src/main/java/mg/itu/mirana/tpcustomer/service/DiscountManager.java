@@ -4,6 +4,7 @@
  */
 package mg.itu.mirana.tpcustomer.service;
 
+import jakarta.enterprise.context.RequestScoped;
 import mg.itu.mirana.tpcustomer.entitity.Discount;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -15,6 +16,7 @@ import java.util.List;
  *
  * @author MIRANA
  */
+@RequestScoped
 public class DiscountManager {
     @PersistenceContext
     private EntityManager em;
