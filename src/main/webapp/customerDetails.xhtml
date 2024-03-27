@@ -41,7 +41,9 @@
                     <h:outputLabel value="Discount:" for="discount" />
                     <h:selectOneMenu 
                         id="discount" value="#{customerDetailsBean.customer.discount}"
-                        title="Discount" required="true" requiredMessage="The Discount field is required.">
+                        title="Discount" required="true" 
+                        requiredMessage="The Discount field is required."
+                        converter="discountConverter">
                         <!-- TODO: update below reference to list of available items-->
                         <f:selectItems value="#{customerDetailsBean.discounts}"
                                        var="discount"
