@@ -31,6 +31,7 @@ import java.util.Collection;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Discount.findAll", query = "SELECT d FROM Discount d"),
+    @NamedQuery(name = "Discount.findAllOrderByRateDesc", query = "SELECT d FROM Discount d order by d.rate DESC"),
     @NamedQuery(name = "Discount.findByCode", query = "SELECT d FROM Discount d WHERE d.code = :code"),
     @NamedQuery(name = "Discount.findByRate", query = "SELECT d FROM Discount d WHERE d.rate = :rate")})
 public class Discount implements Serializable {
